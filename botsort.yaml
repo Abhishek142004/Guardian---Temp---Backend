@@ -1,0 +1,5 @@
+# botsort.yaml
+track_buffer: 30
+match_threshold: 0.8
+frame_rate: 30
+detector: yolov8
