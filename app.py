@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from ultralytics import YOLO
 import cv2
 import os
@@ -25,6 +26,7 @@ db = firestore.client()
 # Initialize Flask
 # ---------------------------
 app = Flask(__name__)
+CORS(app)
 app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 * 1024  # 1 GB
 
 # ---------------------------
